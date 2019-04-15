@@ -3,6 +3,8 @@ package com.mir.big.data.test.service;
 import com.mir.big.data.test.entity.Product;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,6 +17,11 @@ import java.util.concurrent.ThreadLocalRandom;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductServiceTest {
+    /**
+     * 日志
+     */
+    private final Logger logger = LoggerFactory.getLogger(ProductServiceTest.class);
+
     @Autowired
     private ProductService productService;
 
@@ -48,7 +55,7 @@ public class ProductServiceTest {
 
             this.productService.saveAll(entities);
 
-            System.out.println("***************" + (i + 1) + "*****************");
+            this.logger.info("***************" + (i + 1) + "*****************");
         }
     }
 }

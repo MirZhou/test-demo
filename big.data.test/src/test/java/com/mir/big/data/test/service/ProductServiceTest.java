@@ -47,6 +47,8 @@ public class ProductServiceTest {
             }
 
             this.productService.saveAll(entities);
+
+            System.out.println("***************" + (i + 1) + "*****************");
         }
     }
 }

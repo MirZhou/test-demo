@@ -24,6 +24,8 @@ public class ProductCategoryServiceTest {
             ProductCategory entity = new ProductCategory();
             entity.setId(i + 1);
             entity.setName("分类" + entity.getId());
+
+            entities.add(entity);
         }
 
         this.productCategoryService.saveAll(entities);

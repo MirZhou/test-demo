@@ -1,0 +1,4 @@
+rootProject.name = 'test-demo'
+include 'aop'
+include 'big.data.test'
+
